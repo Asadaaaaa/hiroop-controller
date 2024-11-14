@@ -23,6 +23,9 @@ class ScreeningRoute extends Primary {
     // --- Questions
     this.API.get(this.endpointPrefix + '/chat/questions', (req, res) => this.ScreeningController.chatGetQuestions(req, res));
     this.API.post(this.endpointPrefix + '/chat/answer', (req, res) => this.ScreeningController.chatAnswer(req, res));
+
+    // --- Respiration Detection
+    this.API.post(this.endpointPrefix + '/respiration-detection', (req, res) => this.ScreeningController.respirationDetection(req, res));
   }
 }
 

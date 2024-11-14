@@ -19,8 +19,8 @@ jobs:
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
             cd app/hiroop/controller/production
-            git pull
             git reset --hard HEAD
+            git pull
             git switch main
             git pull origin main
             npm i

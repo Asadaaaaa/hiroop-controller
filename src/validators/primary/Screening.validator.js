@@ -55,6 +55,21 @@ class ScreeningValidator {
     required: [ 'dailyActivity', 'symptomDuration', 'environmentalExposure', 'smokingHabits', 'peakTime', 'triggerFactors', 'chestComplaint' ],
     additionalProperties: false
   }
+
+  respirationDetection = {
+    type: 'object',
+    properties: {
+      audioFile: {
+        type: 'string',
+        minLength: 1,
+        pattern: '^[A-Za-z0-9+/]+[=]{0,2}$',
+        nullable: false
+
+      }
+    },
+    required: [ 'audioFile' ],
+    additionalProperties: false
+  }
 }
 
 export default ScreeningValidator;
