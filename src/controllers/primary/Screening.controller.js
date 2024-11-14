@@ -98,7 +98,7 @@ class ScreeningController {
 
     if(respirationDetectionSrv === -5) return res.status(400).json(this.ResponsePreset.resErr(
       400,
-      'Bad Request, No Audio Provided',
+      'Service Respiration Detection Error, No Audio Provided',
       'service-respiration-detection',
       {
         code: -5

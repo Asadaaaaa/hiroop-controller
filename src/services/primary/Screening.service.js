@@ -77,7 +77,6 @@ class ScreeningService {
         pneumonia: response.data.data.pneumonia,
       }
     } catch (error) {
-      console.log(error.response.data.err.data.code)
       if(error.response.data.err.data.code === -1) {
         return -5;
       }
