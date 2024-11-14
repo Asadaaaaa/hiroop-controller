@@ -126,6 +126,21 @@ class ScreeningController {
     return res.status(200).json(this.ResponsePreset.resOK('OK', respirationDetectionSrv));
   }
 
+
+  async sendEmail(req, res) {
+    const schemeValidate = this.Ajv.compile(this.ScreeningValidator.sendEmail);
+
+    if(!schemeValidate(req.body)) return res.status(400).json(this.ResponsePreset.resErr(
+      400,
+      schemeValidate.errors[0].message,
+      'validator',
+      schemeValidate.errors[0]
+    ));
+
+    const sendEmailSrv = await this.ScreeningService.sendEmail(req.body);
+
+    return res.status(200).json(this.ResponsePreset.resOK('OK', null));
+  }
 }
 
 export default ScreeningController;

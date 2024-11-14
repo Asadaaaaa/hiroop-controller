@@ -70,6 +70,25 @@ class ScreeningValidator {
     required: [ 'audioFile' ],
     additionalProperties: false
   }
+
+  sendEmail = {
+    type: 'object',
+    properties: {
+      email: {
+        type: 'string',
+        maxLength: 100,
+        minLength: 5,
+        pattern: '^\\S+@\\S+\\.\\S+$',
+        nullable: false
+      },
+      content: {
+        type: 'string',
+        nullable: false
+      }
+    },
+    required: [ 'email', 'content' ],
+    additionalProperties: false
+  }
 }
 
 export default ScreeningValidator;

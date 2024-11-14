@@ -26,6 +26,9 @@ class ScreeningRoute extends Primary {
 
     // --- Respiration Detection
     this.API.post(this.endpointPrefix + '/respiration-detection', (req, res) => this.ScreeningController.respirationDetection(req, res));
+
+    // --- Send Email
+    this.API.post(this.endpointPrefix + '/send-email', (req, res) => this.ScreeningController.sendEmail(req, res));
   }
 }
 

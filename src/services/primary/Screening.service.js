@@ -1,6 +1,7 @@
 // Helper
 import GeminiAI from "../../helpers/GeminiAI.helper.js";
 import FileSystemHelper from "../../helpers/FileSystem.helper.js";
+import MailHelper from "../../helpers/Mailer.helper.js";
 
 // Library
 import * as mm from 'music-metadata';
@@ -12,7 +13,8 @@ class ScreeningService {
     this.server = server;
 
     this.GeminiAIHelper = new GeminiAI(this.server);
-    this.FileSystemHelper = new FileSystemHelper(this.server);    
+    this.FileSystemHelper = new FileSystemHelper(this.server);
+    this.MailHelper = new MailHelper(this.server);  
   }
 
   async chatGetQuestions() {
@@ -87,6 +89,14 @@ class ScreeningService {
 
       return -500;
     }
+  }
+
+  async sendEmail(data) {
+    this.MailHelper.sendEmail(data.email, 'Screening Result', {
+      html: data.content
+    });
+
+    return 1;
   }
 }
 
