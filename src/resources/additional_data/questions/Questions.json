@@ -1,0 +1,9 @@
+{
+  "dailyActivity": "Ceritakan kebiasaan aktivitas harianmu dari bangun hingga tidur",
+  "symptomDuration": "Apakah kamu pernah mengeluhkan sakit saat bernapas? Jika, iya ceritakan awal mula munculnya gejala tersebut",
+  "environmentalExposure": "Apakah udara di lingkungan aktivitasmu sehari-hari sering terpapar oleh polusi seperti debu dan asap?",
+  "smokingHabits": "Apakah kamu seorang perokok aktif? Jika iya, seberapa sering kamu merokok dalam satu hari?",
+  "peakTime": "Saat kapan rata-rata waktu muncul gejala pernapasan yang kamu rasakan?",
+  "triggerFactors": "Menurutmu, faktor apa yang membuat pernapasan terasa lebih lancar atau terganggu?",
+  "chestComplaint": "Apakah ada sesak napas atau nyeri dada yang kamu rasakan saat atau setelah melakukan aktivitas. tertentu?"
+}
